@@ -5,3 +5,7 @@ ws-protoc:
 ws-win:
 	GOPATH=`pwd` go get -d server
 	GOPATH=`pwd` GOOS=windows go build -tags "ws" -o bin/Ws.exe server
+
+client:
+	GOPATH=`pwd` go get -d client
+	GOPATH=`pwd` GOOS=windows go build -tags "ws client" -o bin/Client.exe client
