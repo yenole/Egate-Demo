@@ -1,0 +1,29 @@
+syntax="proto2";
+
+package msg;
+
+// -----------------------------------客户端发送信息-------------------------------------------------------
+
+// 登录
+message CS_Login{
+    required string user = 1;       // user
+    required string pass = 2;       // pass
+}
+
+// 消息
+message CS_SendMsg{
+    required string msg = 1;        // msg
+}
+
+// ------------------------------------服务端返回消息--------------------------------------------------
+
+// 玩家消息
+message SC_Account{
+    required uint64 id = 1;         // ID
+    required string nick = 2;       // Nick
+}
+
+// 消息
+message SC_Msg{
+    required string msg = 1;        // msg
+}
