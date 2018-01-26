@@ -5,11 +5,11 @@ import (
 	"egate/gate"
 	"egate/gate/route"
 	"egate/model"
+	_ "egate/model/encoding/proto"
 	"server/msg"
 )
 
 func init() {
-	model.MsgParse(model.MSG_PARSER_PROTO)
 	model.MsgIn(new(msg.CS_Login))
 	model.MsgOut(new(msg.SC_Account), new(msg.SC_Msg))
 	model.MsgModelIn(new(Account), "ReqSendMsg")

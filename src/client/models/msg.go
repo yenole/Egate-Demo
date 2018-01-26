@@ -7,10 +7,10 @@ import (
 	"egate/model"
 	"github.com/golang/protobuf/proto"
 	"server/msg"
+	_"egate/model/encoding/proto"
 )
 
 func init() {
-	model.MsgParse(model.MSG_PARSER_PROTO)
 	model.MsgIn(new(msg.SC_Account), new(msg.SC_Msg))
 	model.MsgOut(new(msg.CS_Login), new(msg.CS_SendMsg))
 
